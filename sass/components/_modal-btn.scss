@@ -1,0 +1,14 @@
+.modal-btn {
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--accent-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  @include font($fs: 16px, $lh: 1.88, $ls: 0.06em);
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+}

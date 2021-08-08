@@ -1,0 +1,120 @@
+.footer {
+  background: var(--sections-background-color);
+}
+
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-contacts {
+    margin-right: 165px;
+  }
+}
+
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  @include font($fs: 26px, $lh: 1.19);
+  color: #ffffff;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.address {
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.contacts__email {
+  margin-bottom: 9px;
+}
+
+.contacts__email-link,
+.contacts__tel-link,
+.address__link {
+  font-style: normal;
+  @include font($fw: 400, $lh: 1.71);
+}
+
+.address__link {
+  font-family: var(--main-font);
+  color: #ffffff;
+}
+
+.contacts__email-link,
+.contacts__tel-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social-title {
+  @include font();
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-form-call {
+  @include font();
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-call {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    margin-right: 93px;
+  }
+}

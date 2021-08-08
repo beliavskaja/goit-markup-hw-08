@@ -1,0 +1,119 @@
+.header {
+  border-bottom: 1px solid #eeeeee;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    justify-content: space-between;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.menu__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    // margin-left: 84px;
+    .header-contacts-link {
+      @include font($fw: 500, $fs: 12px, $lh: 1.17, $ls: 0.02em);
+    }
+    .header-email {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.email-icon,
+.tel-icon {
+  fill: #757575;
+  transition: fill 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 10px;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+  .email-link:hover &,
+  .email-link:focus &,
+  .tel-link:hover &,
+  .tel-link:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.menu__link.current {
+  color: var(--accent-color);
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    bottom: -33px;
+  }
+}
+
+.menu__link,
+.email-link,
+.tel-link {
+  font-style: normal;
+  @include font($fw: 500, $ls: 0.02em);
+  color: var(--main-text-color);
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.email-link,
+.tel-link {
+  display: flex;
+  align-items: center;
+  color: #757575;
+  margin-left: 10px;
+}
+
+.header-email {
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu,
+  .header-contacts {
+    display: none;
+  }
+}

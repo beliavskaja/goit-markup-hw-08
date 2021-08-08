@@ -1,0 +1,30 @@
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.clients-list-item {
+  margin-bottom: 30px;
+}
+
+.clients-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-section-title {
+  color: var(--main-text-color);
+  @include font($fs: 28px, $lh: 1.18);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cleints-section-title {
+    @include font($fs: 36px, $lh: 1.17);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

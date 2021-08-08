@@ -1,0 +1,125 @@
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.menu-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-close-btn {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.close-btn__icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.mobile-menu__mobile-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-menu__container {
+  position: relative;
+  min-height: 200px;
+  padding-top: 48px;
+  padding-left: 40px;
+}
+
+.mobile-menu-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-social-media {
+  margin-right: 20px;
+}
+
+.menu-media-link {
+  color: var(--accent-color);
+  @include font($fw: 500, $fs: 18px, $lh: 1.22, $ls: 0.02em);
+}
+
+.mobile-menu-tel {
+  margin-top: 302px;
+  margin-bottom: 32px;
+}
+
+.menu-tel-link {
+  color: var(--accent-color);
+  @include font($fw: 500, $fs: 34px, $lh: 1.18, $ls: 0.02em);
+}
+
+.mobile-menu-email {
+  margin-bottom: 64px;
+}
+.menu-email-link {
+  color: #757575;
+  @include font($fw: 500, $fs: 24px, $lh: 1.17, $ls: 0.02em);
+}
+
+.nav-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.nav-list__link {
+  color: var(--main-text-color);
+  @include font($fw: 500, $fs: 40px, $lh: 1.18, $ls: 0.02em);
+}
+
+.nav-list__link:hover,
+.nav-list__link:focus {
+  color: var(--accent-color);
+}
+
+.close-icon:focus,
+.close-icon:hover {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn,
+  .mobile-menu {
+    display: none;
+  }
+}

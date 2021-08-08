@@ -1,0 +1,37 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  @include font($fs: 24px, $lh: 1.17);
+  color: #000;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 93px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font($fs: 26px, $lh: 1.19);
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+// .logo {
+//   font-family: "Raleway", sans-serif;
+//   font-style: normal;
+//   @include font($fs: 26px, $lh: 1.19);
+//   color: #000;
+//   padding-top: 24px;
+//   padding-bottom: 25px;
+//   margin-right: 93px;
+// }
+.part-logo {
+  color: var(--accent-color);
+}

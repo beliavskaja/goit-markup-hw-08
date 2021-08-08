@@ -1,0 +1,36 @@
+@media screen and (max-width: 1199px) {
+  .services {
+    display: none;
+  }
+}
+.services-heading {
+  @include font($fs: 36px, $lh: 1.17);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sarvices-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.sarvices-title {
+  @include font();
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 27px;
+}
+
+.services-item {
+  position: relative;
+}
