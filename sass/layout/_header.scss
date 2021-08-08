@@ -85,6 +85,12 @@
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .menu__link.current::after {
+    bottom: -44px;
+  }
+}
+
 .menu__link,
 .email-link,
 .tel-link {

@@ -566,6 +566,7 @@ img {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 500ms linear, visibility 500ms linear;
+  overflow-y: auto;
 }
 
 .mobile-menu.is-open {
@@ -597,6 +598,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 48px;
 }
 
 .menu-social-media {
@@ -754,6 +756,11 @@ img {
   bottom: -33px;
 }
 
+@media screen and (max-width: 1199px) {
+  .menu__link.current::after {
+    bottom: -44px;
+  }
+}
 .menu__link,
 .email-link,
 .tel-link {
